@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "TRB2-main",
+			"path": "../TRB2-main"
+		},
+		{
+			"name": "final trb2",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "TRB2-main"
+	}
+}

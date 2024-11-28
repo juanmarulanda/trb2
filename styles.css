@@ -1,0 +1,257 @@
+/*IMG-SECTION*/
+/* Card Styles */
+.card {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card-img-top {
+  height: 450px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.2rem;
+}
+
+
+section img {
+  width: 50%;
+  flex-grow: 1;
+  object-fit: cover;
+  object-fit: cover;
+  opacity: 7;
+  transition: all ease-in-out 0.5;  
+}
+
+section img:hover {
+
+  cursor: crosshair;
+  width: 500px;
+  opacity: 7;
+  filter: contrast(100%);
+
+
+}
+
+
+/*FIN IMG-SECTION*/
+
+
+
+/*MENÚ*/
+.menuToggle {
+    display: block;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    a {
+      text-decoration: none;
+      color: #232323;
+      transition: all 0.3s ease;
+      &:hover {
+        color: tomato;
+      }
+    }
+    input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      cursor: pointer;
+      opacity: 0; /* hide this */
+      z-index: 2; /* and place it over the hamburger */
+      -webkit-touch-callout: none;
+    }
+    span {
+      position: relative;
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #cdcdcd;
+      border-radius: 0px;
+      z-index: 1;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+      &:first-child {
+        transform-origin: 0% 0%;
+      }
+      &:nth-last-child(2) {
+        transform-origin: 0% 100%;
+      }
+    }
+  }
+
+
+
+
+
+.menuToggle {
+  input {
+    &:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #232323;
+      &:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+      &:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+      }
+    }
+    &:checked ~ .menuItem {
+      transform: none;
+    }
+    
+  }
+}
+
+.menuItem {
+  position: absolute;
+  width: 280px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  li {
+    padding: 10px 0;
+    font-size: 25px;
+  }
+}
+
+.menu--left {
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0;
+  top: -20px;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 1000;
+  .menuToggle {
+    left: 0;
+    input {
+      left: 50px;
+    }
+    span {
+      left: 50px;
+    }
+  }
+  .menuItem {
+    left: 40px;
+    margin: -100px 0 0 -50px;
+    transform: translate(-100%, 0);
+  }
+}
+
+.menu--left{
+    display: block;
+}
+
+/*FIN MENÚ*/
+
+
+
+ /* FORMULARIO */
+
+form{
+    background-color:none;
+    box-shadow: 5 5 20px red;
+    margin-left: 0px;
+    padding: 20px 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    text-align: center;
+    width: 500px;
+    margin-top: 15px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+h2{
+    color: #283629;
+    font-size: 20px;
+}
+
+label{
+    color: 283629;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+input, textarea{
+    padding: 17px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 350px;
+    background-color: #fffaed;
+    border: 2px solid #F0FAF1;
+    color:#dacbbd;
+    outline: none;
+}
+
+input::placeholder.textarea::placeholder{
+    color: #b5cab6;
+}
+
+.form-txt{
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.form-txt a{
+    color: #76b28e;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn {
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 0px;
+    background-color: #51D94C;
+    box-shadow: 0 0 20px rgba(25, 254, 0, 0.4);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #4b9de0;
+}
+
+@media(max-width:991px) {
+    body {
+        padding: 30px;
+    }
+    form{
+        padding: 50px 30px;
+        width: 100%;
+    }
+    input {
+        padding: 15px;
+    }
+
+}
+
+/*FIN FORMULARIO*/
